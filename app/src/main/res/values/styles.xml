@@ -1,0 +1,17 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">#4876FF</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <!--EditText hint color-->
+        <item name="android:textColorHint">#4876FF</item>
+        <item name="colorAccent">#000</item><!-- 获得焦点时的颜色，对于EditText是下面的横线 -->
+        <item name="colorControlNormal">#1ff2ff</item><!-- 未获得焦点时的颜色，对于EditText是下面的横线 -->
+    </style>
+
+    <style name="edit_style" parent="@android:style/TextAppearance">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">#4876FF</item>
+    </style>
+</resources>

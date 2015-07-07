@@ -1,0 +1,105 @@
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/coo_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/title_bar"
+            layout="@layout/layout_title_bar" />
+
+        <Button
+            android:id="@+id/btn_tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_bar"
+            android:text="COLLPASING TOOL BAR LAYOUT" />
+        <Button
+            android:id="@+id/btn_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_tool_bar"
+            android:text="APP BAR LAYOUT" />
+
+        <Button
+            android:id="@+id/btn_snackbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_app_bar"
+            android:text="SNACKBAR" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_snackbar"
+            app:errorTextAppearance="@style/edit_style"
+            app:hintTextAppearance="@style/edit_style">
+
+            <EditText
+                android:id="@+id/et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入用户名"
+                android:textColor="#000"
+                android:textSize="22sp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/input_layout"
+            app:errorTextAppearance="@style/edit_style"
+            app:hintTextAppearance="@style/edit_style">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入密码"
+                android:inputType="numberPassword"
+                android:textColor="#000"
+                android:textSize="22sp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/input_layout_2"
+            android:text="TAB LAYOUT" />
+
+        <!--
+        fab继承自ImageView
+        控制fab背景色 backgroundTint
+        控制fab点击后的颜色 rippleColor
+        控制阴影大小 elevation
+        控制点击时阴影大小pressedTranslationZ
+        -->
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:src="@drawable/ic_add_white_48dp"
+        app:backgroundTint="#9575CD"
+        app:elevation="6dp"
+        app:fabSize="normal"
+        app:layout_anchor="@id/coo_content"
+        app:layout_anchorGravity="bottom|end|right"
+        app:pressedTranslationZ="8dp"
+        app:rippleColor="#311B92"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="1dp"/>
+
+</android.support.design.widget.CoordinatorLayout>
